@@ -1,0 +1,301 @@
+    .icon-close {
+        position: absolute;
+        top: 17px;
+        left: 100%;
+        transform: translateX(-30px) scale(1.5);
+        width: 17px;
+        height: 17px;
+        color: grey;
+    }
+
+    .previous {
+        position: absolute;
+        top: 16px;
+        left: 13px;
+        color: white;
+        opacity: .5;
+        transform: scale(1.3);
+    }
+
+    .logo-and-text-container {
+        position: absolute;
+        top: 11%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #8D8D8D;
+        font-size: 14px;
+        font-family: Helvetica;
+        line-height: 17px;
+        text-align: center;
+    }
+
+    .logo-add-post {
+        background-image: url('/assets/header-logo.png');
+        background-size: cover;
+        background-position: center;
+        width: 88.3px;
+        height: 32.24px;
+        margin: auto;
+        margin-bottom: 36px;
+    }
+
+    .insert-achievements {
+        display: flex;
+        position: absolute;
+        top: 51%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 245px;
+        width: 285px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .achievement-sugar, .achievement-grain, .achievement-water, .achievement-exercise, .achievement-bible-study {
+        font-family: Helvetica;
+        text-align: center;
+        color: #FFFFFF;
+        opacity: .2;
+    }
+
+    .achievement-sugar.is_showing, .achievement-grain.is_showing, .achievement-water.is_showing, .achievement-exercise.is_showing, .achievement-bible-study.is_showing {
+        opacity: 1;
+    }
+
+    .achievement-sugar.logged, .achievement-grain.logged, .achievement-water.logged, .achievement-exercise.logged, .achievement-bible-study.logged {
+        opacity: .07;
+    }
+
+    .achievement {
+        width: 84.46px;
+        height: 84.46px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .continue-insert {
+        position: absolute;
+        top: 75%;
+        left: 0%;
+        width: 100%;
+        height: 60px;
+        text-align: center;
+    }
+
+    .continue-insert-button {
+        width: 254.96px;
+        height: 100%;
+        background-color: #333333;
+        color: white;
+        border-radius: 100px;
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        line-height: 17px;
+        font-family: Gotham;
+        text-transform: uppercase;
+    }
+
+    .continue-insert-button.active {
+        background-color: #FD6446;
+    }
+
+    .journal-description {
+        width: 290.01px;
+        text-align: center;
+        color: #8D8D8D;
+        font-family: Helvetica;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0px auto 23px;
+    }
+
+    .journal-nutrition, .journal-exercise, .journal-bible {
+        display: none;
+    }
+
+    .journal-nutrition.is_showing, .journal-exercise.is_showing, .journal-bible.is_showing {
+        display: block;
+    }
+
+    .journal-nutrition-input, .journal-exercise-input, .journal-bible-input {
+        display: block;
+        width: 339.25px;
+        background-color: #333333;
+        height: 82.69px;
+        color: white;
+        border: none;
+        margin: 12px auto;
+    }
+
+    .log-for-yesterday {
+        color: #8D8D8D;
+        font-family: Helvetica;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 33px;
+        text-align: center;
+    }
+
+    #log-for-yesterday {
+        background-color: grey;
+    }
+
+    .journal-entry-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .journal-entry-icon-container {
+        display: flex;
+        width: 60%;
+        height: 33.41px;
+        margin: auto;
+        margin-bottom: 13px;
+        justify-content: space-around;
+    }
+
+    .sugar-small, .grain-small, .water-small, .exercise-small, .bible-study-small {
+        height: 28.75px;
+        width: 28.75px;
+        border-radius: 50%;
+        opacity: .3;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .sugar-small {
+        background-image: url('/assets/sugar.png');
+    }
+
+    .grain-small {
+        background-image: url('/assets/grain.png');
+    }
+
+    .water-small {
+        background-image: url('/assets/water.png');
+    }
+
+    .exercise-small {
+        background-image: url('/assets/workout.png');
+    }
+
+    .bible-study-small {
+        background-image: url('/assets/bible.png');
+    }
+
+    .sugar-small.is_showing, .grain-small.is_showing, .water-small.is_showing, .exercise-small.is_showing, .bible-study-small.is_showing {
+        opacity: 1;
+    }
+
+    .journal-type {
+        color: #EFEFEF;
+        font-family: Helvetica;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 19px;
+    }
+
+    .submit-journal {
+        display: block;
+        height: 60px;
+        width: 240.32px;
+        border-radius: 100px;
+        border: none;
+        color: white;
+        font-family: Gotham;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        line-height: 17px;
+        background-color: #333333;
+        /*background-color: #FD6446;*/
+        margin: auto;
+    }
+
+    .submit-journal.is_showing {
+        background-color: #FD6446;
+    }
+
+    .go-to-shirt-size {
+        display: block;
+        height: 60px;
+        width: 240.32px;
+        border-radius: 100px;
+        border: none;
+        color: white;
+        font-family: Gotham;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        line-height: 17px;
+        background-color: #333333;
+        margin: auto;
+    }
+
+    .go-to-shirt-size.is_showing {
+        background-color: #FD6446;
+    }
+
+    .size-container {
+        display: flex;
+        position: absolute;
+        top: 51%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 245px;
+        width: 285px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .size {
+        width: 84.46px;
+        height: 84.46px;
+        border: 2px solid white;
+        text-align: center;
+        line-height: 84.46px;
+        color: white;
+        font-family: Gotham;
+        font-size: 23px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+        flex-wrap: wrap;
+    }
+
+    .size-xsmall, .size-small, .size-medium, .size-large, .size-xlarge, .size-xxlarge {
+        opacity: .3;
+        background-color: transparent;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .size-xsmall.active, .size-small.active, .size-medium.active, .size-large.active, .size-xlarge.active, .size-xxlarge.active {
+        opacity: 1;
+    }
+
+    @media(max-width: 330px) {
+        .logo-and-text-container {
+            top: 5%;
+        }
+        .insert-achievements {
+            width: 230px;
+            height: 200px;
+        }
+        .achievement {
+            width: 65px;
+            height: 65px;
+        }
+        .journal-entry {
+            height: 100%;
+        }
+        .journal-nutrition-input, .journal-exercise-input, .journal-bible-input {
+            width: 280px;
+            height: 12vh;
+        }
+    }

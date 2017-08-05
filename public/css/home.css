@@ -1,0 +1,535 @@
+@font-face {
+    font-family: Gotham;
+    src: url('/fonts/GOTHAM-MEDIUM.TTF');
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 330px;
+    min-height: 66px;
+    background-color: #181818;
+    z-index: 99999999;
+}
+
+.header-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('/assets/header-logo.png');
+    background-size: cover;
+    background-position: center;
+    width: 80.32px;
+    height: 29.32px
+}
+
+.icon-settings {
+    width: 17px;
+    height: 17px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.3);
+    color: white;
+}
+
+.title {
+    display: inline-block;
+    min-width: 60%;
+    max-width: 315px;
+    min-height: 29px;
+    position: relative;
+    top: 17px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: Helvetica;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.back {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 23px;
+    color: white;
+}
+
+.icon-arrow-left {
+    color: white;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 330px;
+    height: auto;
+    min-height: calc(100vh - 132px);
+    padding-top: 66px;
+    padding-bottom: 66px;
+    background-color: #f3f3f3;
+    overflow: hidden;
+}
+
+.numbers {
+    display: flex;
+    width: 100%;
+    min-width: 250px;
+    height: 56.31px;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #c2c2c2;
+    margin-bottom: -6px;
+    justify-content: space-around;
+}
+
+.number-container {
+    position: relative;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+.number-container.seven {
+    background-color: #FD6446;
+    border-radius: 50%;
+    color: white;
+}
+
+.number {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.number.m-fade {
+    opacity: .5;
+}
+
+.number.f-fade {
+    opacity: .2;
+}
+
+
+/*This is the style for each individual post*/
+
+.post {
+    width: 100%;
+    min-width: 260px;
+    max-width: 700px;
+    min-height: 187px;
+    background-color: white;
+    border: 1px solid #dadada;
+    margin: 6px auto;
+}
+
+@media(max-width: 700px) {
+    .post {
+        border-top: 1px solid #dadada;
+        border-bottom: 1px solid #dadada;
+    }
+}
+
+.profile-picture {
+    display: inline-block;
+    width: 41.86px;
+    height: 41.86px;
+    border-radius: 50%;
+    background-image: url('/images/profile.jpg');
+    background-color: #d8d8d8;
+    background-size: cover;
+    background-position: center;
+}
+
+.user_info {
+    position: relative;
+    padding: 20.79px 16.34px 0px;
+}
+
+.name-and-team {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 3.95px;
+    margin-left: 12.8px;
+}
+
+.name {
+    display: block;
+    color: #181818;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 19px;
+}
+
+.team-leader-indicator {
+    display: inline-block;
+    height: 8.36px;
+    width: 8.36px;
+    border-radius: 50%;
+    background-color: #FD6446;
+    margin-top: 6px;
+    margin-left: 3px;
+    vertical-align: top;
+}
+
+.team {
+    display: block;
+    color: #989898;
+    font-family: Helvetica;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.time-ago {
+    display: inline-block;
+    float: right;
+    margin-top: 3px;
+    color: #989898;
+    font-family: Helvetica;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.post-label {
+    color: #333333;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+}
+
+.post-body {
+    display: block;
+    width: 93%;
+    min-height: 34px;
+    height: auto;
+    margin: 10px auto;
+    color: #333333;
+    margin-bottom: 20px;
+    font-family: Helvetica;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.morecontent span {
+    display: none;
+}
+
+.morelink {
+    display: inline-block;
+    color: grey;
+}
+
+.achievements-comments-container {
+    display: flex;
+    width: 93%;
+    height: 20px;
+    margin: 0px auto 26px;
+    justify-content: space-between;
+}
+
+.post-date {
+    font-family: Helvetica;
+    font-weight: lighter;
+    width: 93%;
+    margin: 0px auto 5px;
+    color: #808B96;
+}
+
+.achievements {
+    display: flex;
+    height: 100%;
+    flex-wrap: nowrap;
+}
+
+.sugar, .water, .grain, .workout, .bible_study {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+    opacity: .2;
+}
+
+.sugar {
+    background-image: url("/assets/sugar-black.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.grain {
+    background-image: url("/assets/grain-black.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.water {
+    background-image: url("/assets/water-black.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.workout {
+    background-image: url("/assets/exercise-black.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.bible_study {
+    background-image: url("/assets/bible-black.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.sugar.achieved, .water.achieved, .grain.achieved, .workout.achieved, .bible_study.achieved {
+    opacity: 1;
+}
+
+.comment {
+    color: #181818;
+    font-family: Gotham;
+    font-weight: lighter;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 14px;
+    margin-top: 4px;
+}
+
+
+/*Menu bar at the bottom*/
+
+.menu {
+    display: flex;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    transform: translate(0px, -66px);
+    width: 100%;
+    min-width: 250px;
+    height: 66px;
+    background-color: #ffffff;
+    border-top: 1px solid #d3d3d3;
+}
+
+.menu.bottom {
+    position: absolute;
+    transform: translate(0px, 0px);
+}
+
+.menu_item, .insert, .leaderboard-modal-menu {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    flex-wrap: nowrap;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.menu-icon-plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.8);
+}
+
+
+/* Settings */
+
+.settings-icon-container {
+    width: 50px;
+    height: 66px;
+    float: right;
+}
+
+.settings {
+    position: fixed;
+    top: 0px;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #181818;
+    z-index: 99999999999;
+    transition: all ease-in-out .2s;
+}
+
+.settings.is_showing {
+    left: 0%;
+}
+
+.settings-menu {
+    position: relative;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: 50%;
+}
+
+.settings-menu-item {
+    font-family: Montserrat;
+    color: #FFFFFF;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin: 16px 0px;
+    white-space: nowrap;
+}
+
+.logout {
+    color: #858585;
+}
+
+
+/* Insert new post */
+
+.insert-modal {
+    position: fixed;
+    top: 100%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #181818;
+    z-index: 999999999;
+    transition: all cubic-bezier(0.29, 1.01, 0.31, 1.01) .4s;
+}
+
+.insert-modal.is_showing {
+    top: 0%;
+}
+
+.journal-entry {
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #181818;
+    transition: all cubic-bezier(0.29, 1.01, 0.31, 1.01) .4s;
+    overflow: scroll;
+}
+
+.journal-entry.is_showing {
+    top: 0%;
+    left: 0%;
+}
+
+.insert-shirt-size {
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #181818;
+    transition: all cubic-bezier(0.29, 1.01, 0.31, 1.01) .4s;
+    overflow: scroll;
+}
+
+.insert-shirt-size.is_showing {
+    top: 0%;
+    left: 0%;
+}
+
+
+/*add family member */
+
+.add-family-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 330px;
+    height: 100%;
+    min-height: calc(100vh - 132px);
+    padding-top: 66px;
+    padding-bottom: 66px;
+    background-color: #181818;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.form-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+}
+
+.add-family-member {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 26px auto;
+    padding: 5px;
+    background-color: rgba(51, 51, 51, 1);
+    letter-spacing: 3px;
+    border: none;
+    color: white;
+    font-family: Helvetica;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    font-weight: 300;
+}
+
+#submit-family {
+    display: block;
+    width: 100%;
+    font-family: Gotham;
+    height: 60px;
+    border-radius: 100px;
+    border: none;
+    margin: auto;
+    background-color: #FD6446;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 17px;
+}
+
+.help-block {
+    color: red;
+    font-family: Gotham;
+    margin: auto;
+}
+
+
+/*Loading icon*/
+
+.loading-container {
+    width: 100%;
+    height: 50px;
+}
+
+.loading {
+    font-family: Gotham;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

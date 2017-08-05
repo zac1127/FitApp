@@ -1,0 +1,117 @@
+.user-comment {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    min-height: 76.45px;
+    background-color: white;
+    border: 1px solid #f8f8f8;
+    margin: auto;
+}
+
+.comment-pic-container {
+    width: 73px;
+    min-width: 73px;
+    min-height: 100%;
+    padding: 20px 0px;
+}
+
+.comment-pic {
+    position: relative;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    height: 41.86px;
+    width: 41.86px;
+    background-position: center;
+    background-size: cover;
+}
+
+.comment-details {
+    padding: 20px 0px;
+}
+
+.comment-name {
+    display: inline-block;
+    color: #181818;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 19px;
+}
+
+.comment-time-ago {
+    display: inline-block;
+    color: #989898;
+    font-family: Helvetica;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.comment-body {
+    color: #333333;
+    font-family: Helvetica;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+
+/************************/
+
+.add-comment {
+    position: fixed;
+    display: flex;
+    top: 100%;
+    left: 0;
+    transform: translateY(-66px);
+    width: 100%;
+    height: 66px;
+    border: 1px solid #BCBCBC;
+    background-color: #FFFFFF;
+    z-index: 999999999999999;
+    justify-content: space-between;
+}
+
+.add-comment.fix {
+    /*To Fix the comment to the bottom of last comment*/
+    /*position: static;
+    display: block;
+    transform: translateY(0px);*/
+    /*To fix comment to top of keyboard*/
+    position: absolute;
+}
+
+#comment-form {
+    display: flex;
+    width: 100%;
+}
+
+.comment-input-container {
+    width: 85%;
+    height: 100%;
+}
+
+#comment-input {
+    width: 100%;
+    height: 66px;
+    border: none;
+    padding-left: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.comment-send {
+    width: 15%;
+    height: 66px;
+}
+
+.send-button {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    transform: translate(-50%, -50%) scale(2);
+    text-align: center;
+}

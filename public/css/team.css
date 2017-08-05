@@ -1,0 +1,111 @@
+.team-container {
+    display: flex;
+    width: 100%;
+    height: 95.95px;
+    border-bottom: 1px solid #BCBCBC;
+    background-color: #FFFFFF;
+}
+
+.team-placement {
+    width: 25%;
+    height: 100%;
+}
+
+.team-details {
+    width: 55%;
+    height: 100%;
+}
+
+.team-arrow {
+    width: 20%;
+    height: 100%;
+}
+
+.place-number {
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 29px;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.team-name {
+    display: block;
+    margin-top: 29.5px;
+    color: #181818;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 19px;
+}
+
+.team-points {
+    display: block;
+    color: rgba(255, 78, 68, 1);
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+}
+
+.team-profile-picture {
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42px;
+    height: 42px;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.icon-arrow-right {
+    color: black;
+    width: 17px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+
+/* Team Leaderboard Container */
+
+.team-type-container {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    /*border: 1px solid #d8d8d8;*/
+}
+
+.team-staff, .team-2k2 {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-family: Montserrat;
+    color: #777;
+    text-transform: uppercase;
+}
+
+.current-team-page {
+    color: black;
+}
+
+.active {
+    background-color: #efefef;
+    color: #aaa;
+}

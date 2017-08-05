@@ -1,0 +1,144 @@
+.hero {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 345.54px;
+    background-color: #333333;
+    z-index: 10000;
+}
+
+.profile-picture-container {
+    position: relative;
+    top: 38%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 220px;
+}
+
+.complete {
+    position: absolute;
+    top: 11%;
+    left: 34%;
+    transform: translate(-20%, -50%);
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+    color: #FD6446;
+    z-index: 9999999999;
+    opacity: 0;
+    transition: all ease-in-out .5s;
+}
+
+.complete.is_showing {
+    transform: translate(-50%, -50%);
+    opacity: 1
+}
+
+.pace {
+    position: absolute;
+    top: 21.5%;
+    left: 42%;
+    transform: translate(-20%, -50%);
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+    color: #FFF;
+    z-index: 9999999999;
+    opacity: 0;
+    transition: all ease-in-out .5s;
+}
+
+.pace.is_showing {
+    transform: translate(-50%, -50%);
+    opacity: 1
+}
+
+#myComplete {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 305px;
+    height: 305px;
+}
+
+#myPace {
+    position: absolute;
+    top: 50.5%;
+    left: 48.5%;
+    transform: translate(-50%, -50%);
+    width: 230px;
+    height: 230px;
+}
+
+.p-profile-picture {
+    position: absolute;
+    top: 51.75%;
+    left: 49.75%;
+    transform: translate(-50%, -50%);
+    width: 110px;
+    height: 110px;
+    background-image: url('/images/profile.jpg');
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    z-index: 9999;
+}
+
+.stats {
+    position: absolute;
+    display: flex;
+    top: 77%;
+    width: 100%;
+    height: 65px;
+    margin-left: -1px;
+    justify-content: center;
+}
+
+.week-stats, .total-stats, .complete-stats {
+    width: 28%;
+    height: 100%;
+}
+
+.stat-number {
+    display: block;
+    font-family: Helvetica;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 43px;
+    color: white;
+    text-align: center;
+}
+
+.stat-type {
+    display: block;
+    font-family: Helvetica;
+    color: #989898;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.activity-breaker {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px 5px;
+    font-weight: bold;
+    background-color: #f3f3f3;
+    font-family: Helvetica;
+    font-size: 16px;
+}
+
+x;
+
+}
+;
+
+}
+
+}

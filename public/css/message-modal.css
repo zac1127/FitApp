@@ -1,0 +1,62 @@
+.message-modal.is_showing {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #181818;
+    z-index: 99999999;
+    transition: all ease-in-out .3s;
+}
+
+.message-modal {
+    position: relative;
+    top: 0;
+    left: -110%;
+    width: 100%;
+    height: 100%;
+    background-color: #181818;
+    z-index: 99999999;
+    transition: all ease-in-out .3s;
+}
+
+.message-and-logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    max-width: 500px;
+    height: auto;
+    color: #8D8D8D;
+    font-size: 18px;
+    font-family: Helvetica;
+    line-height: 25px;
+}
+
+.happy-mothers-day {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px auto 35px;
+}
+
+.center-button {
+    width: 100%;
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.close-message-button {
+    width: 254.96px;
+    height: 60px;
+    background-color: #FD6446;
+    color: white;
+    border-radius: 100px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 17px;
+    font-family: Gotham;
+    text-transform: uppercase;
+}

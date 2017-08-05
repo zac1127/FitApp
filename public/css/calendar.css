@@ -1,0 +1,103 @@
+.days-of-week {
+    position: fixed;
+    top: 66px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    height: 66px;
+    background-color: rgba(243, 243, 243, 1);
+    justify-content: center;
+    z-index: 99999999;
+}
+
+.day-of-week-breaker {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    height: 66px;
+}
+
+.day-container {
+    width: 13%;
+    height: 66px;
+    text-align: center;
+}
+
+.day {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    color: #B0B0B0;
+    font-family: Helvetica;
+    font-size: 12px;
+    text-align: center;
+}
+
+.first-month-title {
+    margin-top: 66px;
+}
+
+.month {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    height: 50px;
+    color: #989898;
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    background-color: #FFFFFF
+}
+
+.month-title {
+    position: relative;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+
+.week-container {
+    display: flex;
+    background-color: #FFFFFF;
+    max-width: 700px;
+    height: 60px;
+    margin: auto;
+    justify-content: center;
+}
+
+.date {
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 42.3px;
+    width: 42.3px;
+    font-family: Helvetica;
+    font-size: 18px;
+    line-height: 42.3px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.date.today {
+    color: white;
+    background-color: #FD6446;
+}
+
+.date-indicator {
+    position: relative;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #FD6446;
+    text-align: center;
+}

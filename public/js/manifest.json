@@ -1,0 +1,14 @@
+{
+  "short_name": "7WM",
+  "name": "7 WEEK MIRACLE",
+  "icons": [
+
+    {
+      "src": "/assets/profile.jpg",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+
+  ],
+  "start_url": "/home"
+}
