@@ -8,7 +8,9 @@ use Carbon\Carbon;
 
 class Post extends Model
 {
-    /*----------------------------------------
+
+
+/*----------------------------------------
   *          Database Relationships
   *-----------------------------------------*/
     public function comments()
@@ -233,6 +235,12 @@ class Post extends Model
             ++$points;
         }
 
+        $totalPoints = $points + User::pointsThisWeek($user_id);
+        if($totalPoints > 26) {
+            $points = 26 - User::pointsThisWeek($user_id);
+        }
+
+
       /*
       * Create the post for the user
       */
@@ -254,7 +262,7 @@ class Post extends Model
         $post->save();
 
         if ($team_id > 0) {
-            /*
+         /*
           * Update the teams points
           * New post is already saved in the database
           * So all we need to do is sum up the teams points.
@@ -322,6 +330,13 @@ class Post extends Model
          * and adds the new points to the variable.
          */
         $post_total_points = self::where('id', $post_id)->pluck('points')[0] + $points;
+
+
+        $totalPoints = $post_total_points + User::pointsThisWeek($user_id);
+        if($totalPoints > 26) {
+            $post_total_points = 26 - User::pointsThisWeek($user_id);
+        }
+
 
         /*
         * Update the post where id = $post_id

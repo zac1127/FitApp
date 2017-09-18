@@ -47,6 +47,11 @@ class User extends Authenticatable
         return Post::where('user_id', '=', $id)->sum('points');
     }
 
+    public static function pointsThisWeek($id)
+    {
+        $week = Week::orderBy('created_at', 'asc')->get()->last();
+        return Post::where('created_at', '>=', $week->created_at)->sum('points');
+    }
 
     public function getPointsAttribute()
     {

@@ -42,23 +42,8 @@ $challenge_percent = ($points_possible / 34) * 100;
 
  ?>
 
- <?php $total = 0; ?>
- <?php $this_week = 0; ?>
-
-@foreach($posts as $post)
-
-<?php
-  /**
-   * Sum up the users points.
-   */
-  if ($post->created_at > $week_start_date) {
-      $this_week += $post->points;
-  }
-
-  $total += $post->points;
- ?>
-
-@endforeach
+ <?php $total = App\User::points($user->id); ?>
+ <?php $this_week = App\User::pointsThisWeek($user->id); ?>
 
 
 <div class="container">
@@ -67,10 +52,10 @@ $challenge_percent = ($points_possible / 34) * 100;
   <div class="hero">
 
     <div class="profile-picture-container">
-      <div class="complete">Challenge</div>
-      <div class="pace">You</div>
-      <div id="myComplete" data-percent="{{$challenge_percent}}"></div>
-      <div id="myPace" data-percent="{{(int) (($this_week / 34) * 100)}}"></div>
+      <div class="complete">Total</div>
+      <div class="pace">Week</div>
+      <div id="myComplete" data-percent="{{(int) (($post_sum / 442) * 100)}}"></div>
+      <div id="myPace" data-percent="{{(int) (($this_week / 26) * 100)}}"></div>
       <div class="p-profile-picture" style="background-image: url(/images/{{$user->profile_picture}})"></div>
     </div>
 
@@ -90,7 +75,7 @@ $challenge_percent = ($points_possible / 34) * 100;
 
       <div class="complete-stats">
         <span class="stat-number">
-           {{(int) (($this_week / 34) * 100)}}%
+           {{(int) (($this_week / 442) * 100)}}%
         </span>
         <span class="stat-type">Complete</span>
       </div>

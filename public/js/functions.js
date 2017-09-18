@@ -2,6 +2,13 @@
 
 $(document).ready(function() {
 
+$('.header-logo').on('click', function() {
+    console.log("click");
+    $('html,body').animate({
+        scrollTop : 0
+    }, 500);
+});
+
   $('#comment-form').on('submit', function (e) {
         e.preventDefault();
         var comment = $('#comment-input').val();
@@ -108,7 +115,7 @@ $(document).ready(function() {
   /**
   * New Journal enry modal
   */
-  // add_post();
+  add_post();
 
 });
 

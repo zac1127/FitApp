@@ -19,7 +19,7 @@
    ?>
 
   <div class="numbers">
-    @if($week_num > 2)
+    @if($week_num > 3)
     <div class="number-container">
       <div class="number f-fade">{{$week_num - 3}}</div>
     </div>
@@ -49,33 +49,18 @@
     <div class="number-container seven">
       <div class="number">{{$week_num}}</div>
     </div>
-    @if($week_num < 7)
     <div class="number-container">
       <div class="number">{{$week_num + 1}}</div>
     </div>
-    @else
-    <div class="number-container">
-      <div class="number"></div>
-    </div>
-    @endif
-    @if($week_num < 6)
+
     <div class="number-container">
       <div class="number m-fade">{{$week_num + 2}}</div>
     </div>
-    @else
-    <div class="number-container">
-      <div class="number"></div>
-    </div>
-    @endif
-    @if($week_num < 5)
+
     <div class="number-container">
       <div class="number f-fade">{{$week_num + 3}}</div>
     </div>
-    @else
-    <div class="number-container">
-      <div class="number"></div>
-    </div>
-    @endif
+
 
   </div>
 
@@ -191,8 +176,6 @@
        </a>
       </span>
 
-
-
     </div>
 
   </div>
@@ -200,8 +183,6 @@
 @endforeach
 {{$posts->links()}}
 </div>
-
-
 
 </div>
 @endsection

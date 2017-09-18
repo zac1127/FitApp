@@ -45,6 +45,7 @@ class HomeController extends Controller
         $user->team_leader = 0;
         $user->family_member = 1;
         $user->profile_picture = 'profile.jpg';
+        $user->message_seen = 0;
         $user->save();
 
         return redirect('/home');

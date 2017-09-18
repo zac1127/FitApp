@@ -19,7 +19,7 @@
 .complete {
     position: absolute;
     top: 11%;
-    left: 34%;
+    left: 40%;
     transform: translate(-20%, -50%);
     font-family: Helvetica;
     font-size: 14px;
@@ -39,7 +39,7 @@
 .pace {
     position: absolute;
     top: 21.5%;
-    left: 42%;
+    left: 40%;
     transform: translate(-20%, -50%);
     font-family: Helvetica;
     font-size: 14px;

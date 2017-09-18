@@ -12,6 +12,8 @@ $(document).ready(function() {
   // prevents the form from being submit twice
   stopMultipleSubmissions();
 
+
+
   $('#log-for-yesterday').change(function() {
 
       /**
@@ -135,7 +137,19 @@ $('.go-to-shirt-size').on('click', function() {
 
   $('.journal-entry-input').on('keyup',function() {
 
-        if(acitvateButton()){
+      var d = new Date();
+      var hour = d.getHours();
+
+      console.log(hour);
+
+       if(hour >= 0 && hour < 4) {
+           $('.submit-journal').prop('disabled', true);
+           $('.submit-journal').attr('disabled' , true);
+           $('.submit-journal').removeClass('is_showing');
+           return;
+       }
+
+        if(acitvateButton()) {
             $('.submit-journal').attr('disabled' , false);
             $('.submit-journal').addClass('is_showing');
             $('.go-to-shirt-size').addClass('is_showing');
@@ -147,7 +161,22 @@ $('.go-to-shirt-size').on('click', function() {
 
   });
 
+  // disable posts after 12am-4am
+  disableButtonAfterMidnight();
+
 });
+
+function disableButtonAfterMidnight() {
+    var d = new Date();
+    var hour = d.getHours();
+
+    console.log(hour);
+
+    if(hour > 20 && hour < 24)
+     {
+         $('.submit-journal').prop('disabled', true);
+     }
+}
 
 function stopMultipleSubmissions() {
     $('#add-post').on('submit', function(){
@@ -265,8 +294,6 @@ function clearSizes() {
   $('.size-large').removeClass('active');
   $('.size-xlarge').removeClass('active');
   $('.size-xxlarge').removeClass('active');
-
-
 }
 
 
@@ -602,9 +629,6 @@ function clearSizes() {
 
   }
 
-
-
-
   function selected() {
     var selected = false;
     if($('.achievement-exercise').hasClass('is_showing'))
@@ -658,6 +682,5 @@ function clearSizes() {
     }
 
     return selected;
-
 
   }

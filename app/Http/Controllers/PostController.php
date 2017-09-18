@@ -16,10 +16,6 @@ class PostController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
-    {
-    }
-
     public function comments(Post $post)
     {
         // Return the comments associated with the Post.
@@ -52,8 +48,18 @@ class PostController extends Controller
         ]);
         }
 
+
         // Get the users ID
         $user_id = Auth::user()->id;
+
+        // make sure the post is not between 12am-4am
+        $current_hour = Carbon::now()->format('H');
+
+        if($current_hour >= 0 && $current_hour < 4)
+        {
+            return redirect('/profile/'.$user_id);
+        }
+
 
         /*
         * If the checkbox to log for yesterday is checked,
@@ -77,13 +83,6 @@ class PostController extends Controller
             Post::newPost($request);
         }
 
-        if (Auth::user()->shirt_size == null) {
-            Post::setTshirtSize($request);
-        }
-
-        if (Auth::user()->message_seen == 0 || Auth::user()->message_seen == null) {
-            User::where('id', $user_id)->update(['message_seen' => '1']);
-        }
 
         // Return the user to their profile.
         return redirect('/profile/'.$user_id);

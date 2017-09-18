@@ -87,6 +87,7 @@
         <div class="menu-icon-plus icon-plus">
         </div>
       </div>
+
       <!-- calendar -->
       <div class="menu_item">
         <a href="/calendar">
@@ -94,6 +95,7 @@
           </div>
         </a>
       </div>
+
       <!-- profile -->
       <div class="menu_item">
         <a href="/profile/{{Auth::user()->id}}">
@@ -101,6 +103,7 @@
           </div>
         </a>
       </div>
+
     </nav>
   @endif
 
@@ -153,7 +156,7 @@
     $yesterday['bible_study'] = '0';
 
     // Get todays, and yesterdays dates
-    // needed today abd ompare to compare
+    // needed today and compare to compare
     // this date against another in post model
     $today_date = Carbon\Carbon::today()->format('n-d-Y');
     $today_date_compare = Carbon\Carbon::today();
@@ -200,12 +203,9 @@
   ?>
 
   <!--  Add new post modal-->
-
-
   <div class="insert-modal">
-
     <!-- Mother's Day Message Modal -->
-    @if(Auth::user()->message_seen == 0 || Auth::user()->message_seen == null)
+    <!-- @if(Auth::user()->message_seen == 0 || Auth::user()->message_seen == null)
     <div class="message-modal is_showing">
       <div class="icon-close"></div>
 
@@ -221,7 +221,7 @@
        </div>
       </div>
     </div>
-    @endif
+    @endif -->
 
     <!--  -->
     <!--  -->
@@ -358,14 +358,7 @@
             <textarea class="journal-entry-input journal-bible-input" name="journal_bible" id="journal_bible_study"></textarea>
           </div>
 
-
-          <!--  if the user hasnt submitted a shirt size -->
-          @if(Auth::user()->shirt_size == NULL)
-            <button class="go-to-shirt-size">NEXT</button>
-          @else
-            <!-- else submit their journal entries -->
-            <button class="submit-journal" type="submit">FINISH</button>
-          @endif
+        <button class="submit-journal" type="submit">FINISH</button>
         </div>
 
       </div>
@@ -373,7 +366,7 @@
 
 
       <!--  t shirt size -->
-      <div class="insert-shirt-size">
+      <!-- <div class="insert-shirt-size">
 
         <div class="icon-close"></div>
 
@@ -426,10 +419,8 @@
             </div>
           </div>
 
-        </div>
-
-
-        <div class="continue-insert" style="color: white;">
+        </div> -->
+        <!-- <div class="continue-insert" style="color: white;">
           <div class="log-for-yesterday">
             <input id="no-shirt-wanted" name="no_shirt_wanted" type="checkbox" />
             No shirt earned
@@ -438,12 +429,7 @@
           <button class="submit-journal" type="submit">FINISH</button>
         </div>
 
-      </div>
-
-
-
-
-
+      </div> -->
 
     </form>
   </div>
