@@ -60,9 +60,9 @@ $challenge_percent = ($points_possible / 34) * 100;
       <?php
 
       if(file_exists("./images/$user->profile_picture")) {
-          $profile_picture = "./images/" . $user->profile_picture;
+          $profile_picture = "/images/" . $user->profile_picture;
       } else {
-          $profile_picture = "./images/profile.jpg";
+          $profile_picture = "/images/profile.jpg";
       }
 
        ?>
@@ -110,7 +110,7 @@ $challenge_percent = ($points_possible / 34) * 100;
 
   <div class="post">
     <div class="user_info">
-      <div class="profile-picture" style="background-image: url(/images/{{$user->profile_picture}})"></div>
+      <div class="profile-picture" style="background-image: url({{$profile_picture}})"></div>
       <div class="name-and-team">
         <span class="name">{{$user->name}}
           @if($user->team_leader == 1)

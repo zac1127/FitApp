@@ -79,9 +79,9 @@
 
 
     if(file_exists("./images/$user->profile_picture")) {
-        $profile_picture = "./images/" . $user->profile_picture;
+        $profile_picture = "/images/" . $user->profile_picture;
     } else {
-        $profile_picture = "./images/profile.jpg";
+        $profile_picture = "/images/profile.jpg";
     }
 
    ?>
