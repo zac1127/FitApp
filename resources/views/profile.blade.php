@@ -56,7 +56,17 @@ $challenge_percent = ($points_possible / 34) * 100;
       <div class="pace">Week</div>
       <div id="myComplete" data-percent="{{(int) (($post_sum / 442) * 100)}}"></div>
       <div id="myPace" data-percent="{{(int) (($this_week / 26) * 100)}}"></div>
-      <div class="p-profile-picture" style="background-image: url(/images/{{$user->profile_picture}})"></div>
+
+      <?php
+
+      if(file_exists("./images/$user->profile_picture")) {
+          $profile_picture = "./images/" . $user->profile_picture;
+      } else {
+          $profile_picture = "./images/profile.jpg";
+      }
+
+       ?>
+      <div class="p-profile-picture" style="background-image: url({{$profile_picture}})"></div>
     </div>
 
     <div class="stats">

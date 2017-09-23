@@ -76,12 +76,20 @@
      */
     $user = App\User::find($post->user_id);
     $team = App\Teams::find($user->teams_id);
+
+
+    if(file_exists("./images/$user->profile_picture")) {
+        $profile_picture = "./images/" . $user->profile_picture;
+    } else {
+        $profile_picture = "./images/profile.jpg";
+    }
+
    ?>
 
   <div class="post">
     <div class="user_info">
       <a href="/profile/{{$user->id}}">
-        <div class="profile-picture" style="background-image: url(/images/{{$user->profile_picture}})"></div>
+        <div class="profile-picture" style="background-image: url({{$profile_picture}})"></div>
       </a>
       <div class="name-and-team">
         <span class="name"><a href="/profile/{{$user->id}}">{{ $user->name }}</a>
