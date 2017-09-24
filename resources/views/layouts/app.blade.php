@@ -446,7 +446,7 @@ var yesterday_post = {!! json_encode($yesterday_post) !!}
 </script>
 
 <script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('js/functions.js?v=1') }}" type="text/javascript"></script>
+<script src="{{ asset('js/functions.js?v=2') }}" type="text/javascript"></script>
 <script src="{{ asset('js/add_post.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/jquery.jscroll.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/jquery.timeago.js') }}" type="text/javascript"></script>
